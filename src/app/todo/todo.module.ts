@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TodoComponent } from './todo.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
 import { TodoCardComponent } from './todo-card/todo-card.component';
 
 const routes: Routes = [
@@ -14,7 +16,12 @@ const routes: Routes = [
   },
 ];
 
-const Mat_Modules = [MatInputModule, MatFormFieldModule];
+const Mat_Modules = [
+  MatInputModule,
+  MatFormFieldModule,
+  MatCheckboxModule,
+  MatCardModule,
+];
 
 @NgModule({
   imports: [

@@ -1,1 +1,5 @@
-<p>todo-card works!</p>
+<mat-card>
+  <mat-checkbox color="primary" [(ngModel)]="config.checked">
+    <p [ngClass]="{ 'line-through': config.checked }">{{ config.text }}</p>
+  </mat-checkbox>
+</mat-card>
