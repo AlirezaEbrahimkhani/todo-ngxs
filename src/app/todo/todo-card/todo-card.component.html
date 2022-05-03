@@ -1,5 +1,14 @@
 <mat-card>
-  <mat-checkbox color="primary" [(ngModel)]="config.checked">
-    <p [ngClass]="{ 'line-through': config.checked }">{{ config.text }}</p>
-  </mat-checkbox>
+  <div class="flex justify-between">
+    <mat-checkbox
+      color="primary"
+      [ngModel]="config.done"
+      (ngModelChange)="checkChanged($event)"
+    >
+      <p [ngClass]="{ 'line-through': config.done }">{{ config.text }}</p>
+    </mat-checkbox>
+    <mat-icon class="cursor-pointer" (click)="onDelete(config.id)" color="warn"
+      >delete</mat-icon
+    >
+  </div>
 </mat-card>

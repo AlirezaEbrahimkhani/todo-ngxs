@@ -7,7 +7,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from "@angular/material/icon";
 import { TodoCardComponent } from './todo-card/todo-card.component';
+import { NgxsModule } from '@ngxs/store';
+import { TodoState } from './todo.state';
 
 const routes: Routes = [
   {
@@ -21,6 +24,7 @@ const Mat_Modules = [
   MatFormFieldModule,
   MatCheckboxModule,
   MatCardModule,
+  MatIconModule
 ];
 
 @NgModule({
@@ -29,6 +33,7 @@ const Mat_Modules = [
     RouterModule.forChild(routes),
     FormsModule,
     ReactiveFormsModule,
+    NgxsModule.forFeature([TodoState]),
     ...Mat_Modules,
   ],
   declarations: [TodoComponent, TodoCardComponent],
