@@ -9,10 +9,8 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
   imports: [
     CommonModule,
     NgxsModule.forRoot([], { developmentMode: !environment.production }),
-    NgxsReduxDevtoolsPluginModule.forRoot({
-      disabled: !environment.production,
-    }),
-    NgxsLoggerPluginModule.forRoot({ disabled: !environment.production }),
+    NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsLoggerPluginModule.forRoot(),
   ],
   exports: [NgxsModule],
 })
